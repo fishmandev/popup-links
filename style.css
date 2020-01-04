@@ -1,0 +1,59 @@
+.wrapper {
+    position: relative;
+}
+.link {
+    display: flex;
+}
+.link-button {
+    padding: 3px 7px 4px;
+    font-size: .7rem;
+    color: black;
+    border: 1px solid black;
+    cursor: pointer;
+}
+.link-button:hover {
+    color: #fe6a6a;
+    border-color: #fe6a6a;
+    border-style: solid;
+    text-decoration: none;
+}
+.popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+.options {
+    display: flex;
+}
+.visible .links {
+    opacity: 1;
+    transition-delay: 0ms;
+    pointer-events: auto;
+}
+.links {
+    opacity: 0;
+    transition: all .5s cubic-bezier(.87, -.41, .19, 1.44);
+}
+.links img {
+    width: 16px;
+    height: 16px;
+}
+.links.l1 {
+    transition-delay: 0ms;
+}
+.visible .links.l1 {
+    transform: translateX(350%) scale(1);
+    
+}
+.links.l2 { 
+    transition-delay: .1s;
+}
+.visible .links.l2 {
+    transform: translateX(400%) scale(1);
+    
+}
+.visible .links.l3 {
+    transform: translateX(450%) scale(1);
+    transition-delay: .2s;
+}
