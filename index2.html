@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div id="wrapper" class="wrapper">
+        <div class="link">
+            <div class="link-button">
+                <span id="button">Link</span>
+            </div>
+        </div>
+        <div class="popup">
+            <div class="options">
+                <a class="links l1" href="#1"><img src="icons/flower-1.png" alt="flower 1"></a>
+                <a class="links l2" href="#2"><img src="icons/flower-2.png" alt="flower 2"></a> 
+                <a class="links l3" href="#3"><img src="icons/flower-3.png" alt="flower 3"></a> 
+            </div>
+        </div>
+    </div>
+    <script>
+        (function () {
+            let button = document.getElementById('button');
+            let wrapper = document.getElementById('wrapper');
+            button.addEventListener('click', function() {
+                if (wrapper.classList.contains('visible')) {
+                    wrapper.classList.remove('visible');
+                } else {
+                    wrapper.classList.add('visible');
+                }            
+            })
+        })();        
+    </script>
+</body>
+</html>
